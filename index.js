@@ -9,6 +9,7 @@ var admin = document.querySelector("#exampleInputAdmin");
 
 
 var fields = document.querySelectorAll("#form-user-create [name]");
+var user = {};
 
 fields.forEach(function(field, index) {
 
@@ -16,21 +17,15 @@ fields.forEach(function(field, index) {
 
         if (field.checked) {
 
-            console.log("SIM", field);
-
+            user[field.name] = field.value;
         }
 
     } else {
 
-        console.log("Não");
+        user[field.name] = field.value;
 
     }
 
 });
 
-
-
-
-
-
-//   console.log(field.id, field.name);
+console.log(user);
