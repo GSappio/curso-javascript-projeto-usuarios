@@ -101,11 +101,11 @@ class User {
 
         if(this.id > 0){
 
-            users.map(u=>{
+            users.map(u=>{  
 
-                if (u.id === this.id) {
+                if (u._id == this.id) {
 
-                    u = this;
+                    Object.assign(u, this);
 
                 }  
 
@@ -113,7 +113,7 @@ class User {
 
             });
 
-        } else {
+        } else {s
 
             this._id = this.getNewID();
 
